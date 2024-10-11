@@ -7,8 +7,25 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    
-    
+    <form id="helpForm" class="helpForm">
+        <span class="title1">We would like to help you</span>
+
+        <input id="name" class="formField" type="text" placeholder="Name">
+        <label id="errorName" for="name" class="errorMsg">Invalid!</label>
+        
+        <textarea id="message" class="formField" type="text" placeholder="Message"></textarea> 
+        <label id="errorMessage" for="message" class="errorMsg">Invalid!</label>
+
+        <span class="title2">how to answer you?</span>
+
+        <input id="phoneNumber" class="formField" type="text" placeholder="Phone number">
+        <label id="errorPhoneNumber" for="phoneNumber" class="errorMsg">Invalid!</label>
+
+        <input id="email" class="formField" type="text" placeholder="Email">
+        <label id="errorEmail" for="email" class="errorMsg">Invalid!</label>
+
+        <button id="sendButton" class="sendButton" type="submit">Send message</button>
+    </form>
 <script src="./main.js"></script>
 </body>
 </html>

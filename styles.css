@@ -1,2 +1,80 @@
+html, body {
+    font-family: sans-serif;
+}
 
+.helpForm {
+    display: grid;
+    max-width: max-content;
+    background-color: ghostwhite;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 4px;
+}
+.title1 {
+    font-size: x-large;
+    font-weight: bold;
+    color: deeppink;
+    margin-bottom: 8px;
+}
+.title2 {
+    font-size: large;
+    font-weight: bold;
+    color: darkgrey;
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.formField {
+    min-height: 30px;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    vertical-align: top;
+    font-size: small;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+.formField:hover {
+    border-color: gainsboro;
+}
+.helpForm #message {
+    height: 50px;
+    transition: transform 0s ease;
+}
+
+.errorFormField {
+    border-color: red;
+}
+.errorFormField::after:active {
+    border-color: rgb(21, 255, 0);
+}
+
+.sendButton {
+    min-height: 40px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border-width: 0px;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: dodgerblue;
+    transition: all 0.3s ease;
+}
+.sendButton:hover {
+    transform: scale(1.026);
+    background-color: rgb(18, 128, 238);
+}
+.sendButton:active {
+    transform: scale(0.98);
+    background-color: rgb(59, 157, 255);
+}
+
+.errorMsg {
+    display: none;
+    color: red;
+    font-size: smaller;
+}
 
