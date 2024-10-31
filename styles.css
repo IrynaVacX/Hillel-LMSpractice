@@ -1,2 +1,20 @@
+body, html {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.container {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  border-style: double;
+  background-color: rgb(182, 188, 189);
+}
 
+.container h1 {
+    text-align: center;
+    font-size: 60pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
