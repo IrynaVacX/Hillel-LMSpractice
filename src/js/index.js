@@ -1,4 +1,7 @@
 "use strict";
+import "../styles/style1.scss";
+import "../styles/style2.css";
+
 const apiKey = "e5d371c4093e88c5cb3effa3afb0b409";
 const city = "Odesa";
 
