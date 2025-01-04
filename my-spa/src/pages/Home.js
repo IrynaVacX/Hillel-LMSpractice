@@ -1,37 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import './Home.css';
+import TodoForm from '../components/TodoForm';
 
-export default function Home({ todos, setTodos }) {
-  const [newTodo, setNewTodo] = useState('');
+export default function Home() {
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || []);
 
-  const addTodo = (e) => {
-    e.preventDefault();
-    if (newTodo.trim()) {
-      setTodos([...todos, { id: Date.now(), text: newTodo }]);
-      setNewTodo('');
-    }
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
+  const addTodo = (todo) => {
+    setTodos([...todos, { id: Date.now(), ...todo }]);
   };
 
   const deleteTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
-
+  
   return (
     <div className={"home"}>
       <h1>To-Do List</h1>
-      <form onSubmit={addTodo}>
-        <input
-          type="text"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Add a new task"
-        />
-        <button type="submit">Add</button>
-      </form>
+      <TodoForm onSubmit={addTodo} />
       <ul>
-        {todos.map(todo => (
+        {todos.map((todo) => (
           <li key={todo.id}>
-            {todo.text}
+            <strong>{todo.title}</strong> - {todo.description} [{todo.priority}]
             <button onClick={() => deleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
