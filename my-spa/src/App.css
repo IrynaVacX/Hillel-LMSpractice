@@ -1,0 +1,36 @@
+.app {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light {
+  background-color: #fce4ec;
+  color: darkslateblue;
+}
+
+.dark {
+  background-color: #1f2731;
+  color: cornflowerblue;
+}
+
+.light button {
+  transition: all 0.3s ease-in-out;
+  background-color: palevioletred;
+}
+.dark button {
+  transition: all 0.3s ease-in-out;
+  background-color:darkblue;
+}
+.light li button {
+  transition: all 0.3s ease-in-out;
+  background-color:pink;
+}
+.dark li button {
+  transition: all 0.3s ease-in-out;
+  background-color: cornflowerblue;
+}
+
+.main {
+  padding: 20px;
+}
